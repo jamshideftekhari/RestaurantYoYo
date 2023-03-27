@@ -1,0 +1,72 @@
+{%extends 'DeliveryLayOut.html'%}
+{%block content%}
+
+
+<p align="center">
+<h1>delivery resturant page</h1><br>
+
+<table style="width: 80%;" align="center">
+    <tr>
+        <th>Resturant Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>Name: </td>
+        <td>Address:</td>
+        <td>Phone: </td>
+        <td>Email</td>
+    </tr>
+    <tr>
+        <td>Name: </td>
+        <td>Address:</td>
+        <td>Phone: </td>
+        <td>Email</td>
+    </tr>
+    <tr>
+        <td>Name: </td>
+        <td>Address:</td>
+        <td>Phone: </td>
+        <td>Email</td>
+    </tr>
+</table>
+
+</p>
+
+<h2>array of strings</h2>
+{%print(r1)%} <br><br>
+
+<h2>array of objects (tuple)</h2>
+{%print(r2)%} <br><br>
+{%for i in r2%}
+    {%print(i)%} <br>
+{%endfor%}
+
+{%for i in r2%}
+    {%for j in i%}
+        {%print(j)%} <br>
+    {%endfor%}
+{%endfor%}
+
+<!-- Dont use this code it will broke your computer-->
+<!-- 
+<table style="width: 80%;" align="center">
+    <tr>
+        <th>Resturant Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+    </tr>
+    {%for i in r2%}
+        <tr>
+            {%for j in i%}
+                <td>{{j}}</td>
+            {%endfor%}
+        </tr>
+    {%endfor%}
+</table>
+-->
+
+{%endblock content%}
+

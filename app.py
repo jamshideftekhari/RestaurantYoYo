@@ -26,6 +26,29 @@ def pos2():
 def marketing():
     return render_template('marketing.html')
 
+@app.route('/deliverer')
+def deliverer():
+    return render_template('deliverer.html')
+
+@app.route('/resturant')
+def resturant():
+    resturants1 = ['yoyo', 'yoyo2', 'yoyo3']
+    resturants2 = [('yoyo', 'adress', 'phone number', 'Email'),
+                   ('yoyo2', 'adress2', 'phone number 2', 'Email 2'), 
+                   ('yoyo3', 'adress3', 'phone number 3', 'Email 3')]
+    return render_template('resturant.html', r1=resturants1, r2=resturants2)
+
+@app.route('/resturantBS')
+def resturantBS():
+    resturants1 = ['yoyo', 'yoyo2', 'yoyo3']
+    resturants2 = [('yoyo', 'adress', 'phone number', 'Email'),
+                   ('yoyo2', 'adress2', 'phone number 2', 'Email 2'), 
+                   ('yoyo3', 'adress3', 'phone number 3', 'Email 3')]
+    return render_template('resturantBS.html', r1=resturants1, r2=resturants2)
+
+@app.route('/deliveryOrder')
+def deliveryOrder():
+    return render_template('deliveryOrder.html')
 
 if __name__ == '__main__':
     app.run(debug=True)                

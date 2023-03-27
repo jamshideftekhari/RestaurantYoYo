@@ -1,0 +1,23 @@
+{%extends 'layoutBS.html'%}
+{%block content%}
+<h1>Resturant page using bootstrap</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Resturant Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Emali</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for i in r2%}
+        <tr>
+            {%for j in i%}
+            <td>{{j}}</td>
+            {%endfor%}
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+{%endblock content%}
