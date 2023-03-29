@@ -1,6 +1,7 @@
 {%extends 'layoutBS.html'%}
 {%block content%}
 <h1>Resturant page using bootstrap</h1>
+<a href="{{url_for('createResturant')}}" class="btn btn-primary">Create</a>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -11,11 +12,15 @@
         </tr>
     </thead>
     <tbody>
-        {%for i in r2%}
+        {%for i in r3%}
         <tr>
             {%for j in i%}
-            <td>{{j}}</td>
+              {%if j != i[0]%}
+                <td>{{j}}</td>
+              {%endif%}                
             {%endfor%}
+            <td><a href="#">Edit</a></td>
+            <td><a href="#">Delete</a></td>
         </tr>
         {%endfor%}
     </tbody>

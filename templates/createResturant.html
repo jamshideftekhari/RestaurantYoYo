@@ -1,0 +1,44 @@
+{% extends "layoutBS.html" %}
+
+{%block content%}
+<h1>Create</h1>
+<h2>Resturant</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form action="{{'/addResturant'}}", method="post">
+            <div class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Restaurant Name</label>
+                <input type="text" id="rname" name="rname" value="" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+           <div class="form-group">
+                <label class="control-label">Adress</label>
+                <input id="adress" name="adress" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Phone Number</label>
+                <input id="phone" name="phone" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Email</label>
+                <input id="email" name="email" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div> 
+        </form>
+    </div>
+</div><br>
+
+<div>
+    <button onclick="history.back()">Go Back</button>
+</div>
+
+
+{%endblock content%}
